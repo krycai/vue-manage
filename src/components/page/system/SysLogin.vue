@@ -8,7 +8,7 @@
                         <img src="../../../assets/img/logo.png" width="180px" height="180px"/>
                     </a>
                 </div>
-                <div class="ms-title">企业微信后台管理系统</div>
+                <div class="ms-title">海信管理系统</div>
                 <div class="login-form">
                     <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
                         <el-form-item prop="username">
@@ -33,7 +33,7 @@
                 </div>
             </el-main>
             <el-footer>
-                Copyright 2013-2016 版权所有 ©tzhsweet 2015-2018 <a href="#" target="_blank" style="text-decoration:none;color: #c1c8d1;">粤ICP备16024545号-1</a>
+                Copyright 2013-2016 版权所有 ©tzhsweet 2015-2018 <a href="#" target="_blank" style="text-decoration:none;color: #c1c8d1;">粤ICP备666666666666号-1</a>
             </el-footer>
         </el-container>
     </div>
