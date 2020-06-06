@@ -286,3 +286,8 @@ export const getEntryInfo = params =>{
 export const reloadCache = params =>{
     return myGet('/admin/sys/dict/type/reloadCache',params)
 };
+//============================日志管理=============================================
+// 列表数据
+export const operationList = params =>{
+    return myPost('/operationLog/list',params)
+};

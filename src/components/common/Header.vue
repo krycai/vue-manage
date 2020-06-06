@@ -47,7 +47,7 @@ export default {
         username() {
             let obj = sessionStorage.getItem('userInfo');
             let userInfo = JSON.parse(obj);
-            return userInfo ? userInfo.name : this.name;
+            return userInfo ? userInfo.userName : this.name;
         }
     },
     methods: {

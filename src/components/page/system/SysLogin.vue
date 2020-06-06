@@ -12,7 +12,7 @@
                 <div class="login-form">
                     <el-form :model="param" :rules="rules" ref="login" label-width="0px" class="ms-content">
                         <el-form-item prop="username">
-                            <el-input v-model="param.userName" placeholder="userName">
+                            <el-input v-model="param.loginName" placeholder="userName">
                                 <el-button slot="prepend" icon="el-icon-lx-people"></el-button>
                             </el-input>
                         </el-form-item>
@@ -46,11 +46,11 @@
             return {
                 disabled:false,
                 param: {
-                    userName: 'sysadmin',
+                    loginName: 'sysadmin',
                     password: 'qq123123',
                 },
                 rules: {
-                    userName: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
+                    loginName: [{ required: true, message: '请输入用户名', trigger: 'blur' }],
                     password: [{ required: true, message: '请输入密码', trigger: 'blur' }],
                 },
             };
@@ -65,9 +65,9 @@
                             if (response.success){
                                 this.$message.success('登录成功');
                                 let userInfo = response.data;
-                                let authorization = userInfo.authorization;
+                                let authorization = userInfo.token;
                                 sessionStorage.setItem('Authorization', authorization);
-                                sessionStorage.setItem('userInfo', JSON.stringify(userInfo.authUser));
+                                sessionStorage.setItem('userInfo', JSON.stringify(userInfo));
                                 this.menuNav();
                             }else {
                                 this.$message.error(response.responseMsg);

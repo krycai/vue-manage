@@ -45,6 +45,11 @@ export default new Router({
                     meta: { title: '用户管理' }
                 },
                 {
+                    path: '/operationLog',
+                    component: () => import(/* webpackChunkName: "donate" */ '../components/page/system/OperationLog.vue'),
+                    meta: { title: '日志管理' }
+                },
+                {
                     path: '/icon',
                     component: () => import(/* webpackChunkName: "icon" */ '../components/page/Icon.vue'),
                     meta: { title: '自定义图标' }
